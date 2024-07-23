@@ -299,6 +299,10 @@ class MobileScannerWeb extends MobileScannerPlatform {
 
       _videoElement = _createVideoElement(_textureId);
 
+      _videoElement.playsInline = true;
+      _videoElement.muted = true;
+      _videoElement.autoplay = true;
+
       _maybeFlipVideoPreview(_videoElement, videoStream);
 
       await _barcodeReader?.start(
